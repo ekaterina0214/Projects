@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExchangeRate.RateView">
+  <ListView x:Name="listView" HasUnevenRows="true" >
+            <ListView.Header>
+              <Label Text="{Binding date}"></Label>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <ViewCell>
+                  <Grid>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="{Binding rowHeight}"></RowDefinition>
+                      <RowDefinition Height="{Binding rowHeight2}"></RowDefinition>
+                      <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="10"></ColumnDefinition>
+                      <ColumnDefinition Width="30"></ColumnDefinition>
+                      <ColumnDefinition Width="*"></ColumnDefinition>
+                      <ColumnDefinition Width="*"></ColumnDefinition>
+                      <ColumnDefinition Width="*"></ColumnDefinition>
+                      <ColumnDefinition Width="*"></ColumnDefinition>
+                      <ColumnDefinition Width="10"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5" Text="{Binding date}" VerticalOptions="End" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" TextColor="##FF4081"></Label>
+                    <Label  Grid.Row="1" Grid.Column="2" Text="{Binding saleRateSTR}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label  Grid.Row="1" Grid.Column="4" Text="{Binding saleRateNBSTR}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label  Grid.Row="1" Grid.Column="3" Text="{Binding purchaseRateSTR}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label  Grid.Row="1" Grid.Column="5" Text="{Binding purchaseRateNBSTR}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding currency}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label Grid.Row="2" Grid.Column="2" Text="{Binding saleRate}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label Grid.Row="2" Grid.Column="3" Text="{Binding purchaseRate}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label Grid.Row="2" Grid.Column="4" Text="{Binding saleRateNB}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label Grid.Row="2" Grid.Column="5" Text="{Binding purchaseRateNB}" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+
+                  </Grid>
+                </ViewCell>
+              </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
+</ContentPage>
