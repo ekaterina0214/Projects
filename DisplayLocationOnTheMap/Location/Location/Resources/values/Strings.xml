@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">Location</string>
+  <string name="google_maps_key">AIzaSyC4r3047TXeoZf3e5MQQSGBC8Om6_v_KJE</string>
+</resources>
